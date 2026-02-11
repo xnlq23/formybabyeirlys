@@ -33,7 +33,7 @@ const CONFIG = {
             nextBtn: "Next ❤️"                                         // Text for the next button
         },
         third: {
-            text: "Will you be my Valentine on February 14th, 2025? 🌹", // The big question!
+            text: "Will you be my Valentine on February 14th, 2026? 🌹", // The big question!
             yesBtn: "Yes!",                                             // Text for "Yes" button
             noBtn: "No"                                                 // Text for "No" button
         }
@@ -82,6 +82,18 @@ const CONFIG = {
         startText: "🎵 Play Music",        // Button text to start music
         stopText: "🔇 Stop Music",         // Button text to stop music
         volume: 0.5                        // Volume level (0.0 to 1.0)
+    },
+
+    // New: Define the order of questions and navigation
+    navigation: {
+        // Order of question keys to display in sequence
+        order: ["first", "second", "third"],
+        // Optional: map each question to the next for quick navigation
+        nextMap: {
+            first: "second",
+            second: "third",
+            third: null // last question has no next
+        }
     }
 };
 
